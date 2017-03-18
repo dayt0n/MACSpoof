@@ -115,7 +115,7 @@ int main(int argc, char* argv[]) {
 	uid_t uid=getuid(), euid=geteuid(); // we need root for certain ifconfig stuff
 	if (uid == 0 || uid!=euid) {
 	} else {
-		printf("You are not root! Please run this command as root to build the ramdisk and ramdisk environment.\n");
+		printf("You are not root! MACSpoof needs root to function properly\n");
 		exit(0);
 	}
 	if ( stat("/usr/local/bin/airport",&st) != 0 ) {
